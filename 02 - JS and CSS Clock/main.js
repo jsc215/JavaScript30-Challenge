@@ -18,18 +18,18 @@ function setDate() {
 }
 
 let calcDegrees = (timeUnit, val) => {
-	return timeUnit / val * 360 + 90;
+  return timeUnit / val * 360 + 90;
 };
 
 // function to fix the glitch at 90 degrees
-let fixGlitch = time => {
-	allHands.forEach(hand  => {
-	  	if (time === 90) {
-	    	hand.style.transition = 'none';
-	  	} else {
-	    	hand.style.transition = '';
-	  	}
-		});
-	};
+let fixGlitch = (time) => {
+  allHands.forEach(hand => {
+    if (time === 90) {
+      hand.style.transition = 'none';
+    } else {
+      hand.style.transition = '';
+    }
+  });
+};
 
 setInterval(setDate, 1000);
