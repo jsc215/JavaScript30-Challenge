@@ -21,7 +21,7 @@ let calcDegrees = (timeUnit, val) => {
 	return timeUnit / val * 360 + 90;
 };
 
-///function to fix the glitch at 90 degrees
+//function to fix the glitch at 90 degrees
 let fixGlitch = time => {
 	allHands.forEach((hand) => {
 	  	if (time === 90) {
