@@ -22,9 +22,8 @@ let calcDegrees = (timeUnit, val) => {
 };
 
 // function to fix the glitch at 90 degrees
-
 let fixGlitch = time => {
-	allHands.forEach((hand) => {
+	allHands.forEach(hand  => {
 	  	if (time === 90) {
 	    	hand.style.transition = 'none';
 	  	} else {
