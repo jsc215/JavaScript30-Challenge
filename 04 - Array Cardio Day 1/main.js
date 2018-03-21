@@ -27,8 +27,7 @@ console.table(fifteen);
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
 let names = inventors.map(name => {
-	 return (
-		 `First Name: ${name.first}  Last Name: ${name.last}`
+	 return `First Name: ${name.first}  Last Name: ${name.last}`
 	 );
 });
 console.log(names);
@@ -70,7 +69,7 @@ let sortedName = people.sort((last, next) => {
 	let[alast, afirst] = last.split(', ');
 	let[blast, bfirst] = next.split(', ');
 
- return alast > blast ? 1 : -1;
+  return alast > blast ? 1 : -1;
 });
 	console.table(sortedName);
 
