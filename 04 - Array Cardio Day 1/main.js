@@ -1,5 +1,5 @@
 
-// ## Array Cardio Day 1
+// Array Cardio Day 1
 const inventors = [
 	{ first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
 	{ first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -27,8 +27,7 @@ console.table(fifteen);
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
 let names = inventors.map(name => {
-	 return `First Name: ${name.first}  Last Name: ${name.last}`
-	 );
+	 return `First Name: ${name.first}  Last Name: ${name.last}`;
 });
 console.log(names);
 
@@ -79,7 +78,7 @@ const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bik
 
 const transportation = data.reduce((obj, transMethod) => {
 	console.log(transMethod);
-	if(!obj[transMethod]){
+	if(!obj[transMethod]) {
 		obj[transMethod] = 0;
 	}
 	obj[transMethod]++;
