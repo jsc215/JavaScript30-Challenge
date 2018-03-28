@@ -80,7 +80,7 @@ const transportation = data.reduce((obj, transMethod) => {
   console.log(transMethod);
   if(!obj[transMethod]) {
 	  obj[transMethod] = 0;
-	}
+  }
   obj[transMethod]++;
   return obj;
 }, {});
