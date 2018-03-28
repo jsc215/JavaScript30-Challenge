@@ -27,7 +27,7 @@ console.table(fifteen);
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
 let names = inventors.map(name => {
-	 return `First Name: ${name.first}  Last Name: ${name.last}`;
+	return `First Name: ${name.first}  Last Name: ${name.last}`;
 });
 console.log(names);
 
