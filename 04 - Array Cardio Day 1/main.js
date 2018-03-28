@@ -27,29 +27,29 @@ console.table(fifteen);
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
 let names = inventors.map(name => {
-	return `First Name: ${name.first}  Last Name: ${name.last}`;
+  return `First Name: ${name.first}  Last Name: ${name.last}`;
 });
 console.log(names);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 let sorted = inventors.sort((a, b) => {
-	return a.year > b.year ? 1 : -1;
+  return a.year > b.year ? 1 : -1;
 });
 console.table(sorted);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 let totalYears = inventors.reduce((total, inventor) => {
-	return total + (inventor.passed - inventor.year);
+  return total + (inventor.passed - inventor.year);
 }, 0);
 console.log(totalYears);
 
 // 5. Sort the inventors by years lived
 let oldest = inventors.sort((a, b) => {
-	let lastGuy = a.passed - a.year;
-	let nextGuy = b.passed - b.year;
-	return lastGuy > nextGuy ? -1 : 1;
+  let lastGuy = a.passed - a.year;
+  let nextGuy = b.passed - b.year;
+  return lastGuy > nextGuy ? -1 : 1;
 });
 console.table(oldest);
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -65,23 +65,23 @@ console.table(oldest);
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 let sortedName = people.sort((last, next) => {
-	let[alast, afirst] = last.split(', ');
-	let[blast, bfirst] = next.split(', ');
+  let[alast, afirst] = last.split(', ');
+  let[blast, bfirst] = next.split(', ');
 
   return alast > blast ? 1 : -1;
 });
-	console.table(sortedName);
+  console.table(sortedName);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
 const transportation = data.reduce((obj, transMethod) => {
-	console.log(transMethod);
-	if(!obj[transMethod]) {
-		obj[transMethod] = 0;
+  console.log(transMethod);
+  if(!obj[transMethod]) {
+	  obj[transMethod] = 0;
 	}
-	obj[transMethod]++;
-	return obj;
+  obj[transMethod]++;
+  return obj;
 }, {});
 console.log(transportation);
