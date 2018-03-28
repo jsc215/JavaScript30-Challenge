@@ -79,7 +79,7 @@ const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bik
 const transportation = data.reduce((obj, transMethod) => {
   console.log(transMethod);
   if(!obj[transMethod]) {
-		obj[transMethod] = 0;
+	  obj[transMethod] = 0;
   }
   obj[transMethod]++;
   return obj;
